@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.4/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+      
+      <a-marker type="barcode" value="0">
+        <a-gltf-model animation-mixer position="0 0 0" rotation="0 0 0" 
+          src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/assets/models/example-model.gltf">
+        </a-gltf-model>
+      </a-marker>
+      
+      <a-marker type="barcode" value="1">
+        <a-box position="0 0 0" rotation="0 0 0" color="red"></a-box>
+      </a-marker>
+      
+      <a-marker type="barcode" value="2">
+        <a-sphere position="0 0 0" radius="1.25" color="yellow"></a-sphere>
+      </a-marker>
+      
+      <a-marker type="barcode" value="3">
+        <a-box position="0 0 0" rotation="0 0 0" color="blue"></a-box>
+      </a-marker>
+      
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
